@@ -74,6 +74,8 @@ python -m pip install --upgrade pip setuptools wheel
 
 Install Python 3.12 x64, then create a virtual environment:
 
+> **Windows build prerequisites**: Some Python dependencies (e.g. `faiss-cpu`) need to be compiled locally when no prebuilt wheel is available. If dependency installation fails with an error such as `Microsoft Visual C++ 14.0 or greater is required`, install [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) first: click **Download Build Tools** on that page, select **C++ build tools** under "Workloads" (or "Individual components"), and make sure the latest **MSVC v142 - VS 2019 C++ x64/x86 build tools** and **Windows 10 SDK** are checked. Once installed, run the dependency commands below.
+
 ```powershell
 py -3.12 -m venv .venv
 .venv\Scripts\activate

@@ -73,6 +73,8 @@ python -m pip install --upgrade pip setuptools wheel
 
 安装 Python 3.12 x64 后创建虚拟环境：
 
+> **Windows 编译依赖**：部分 Python 依赖（如 `faiss-cpu`）在没有预编译 wheel 时需要本地编译。若安装依赖时出现 `Microsoft Visual C++ 14.0 or greater is required` 之类的错误，请先安装 [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)：点击页面上的 **Download Build Tools**，在安装程序的 "Workloads"（或 "Individual components"）中勾选 **C++ build tools**，并确认选中最新版的 **MSVC v142 - VS 2019 C++ x64/x86 build tools** 与 **Windows 10 SDK**，安装完成后再执行下面的依赖安装命令。
+
 ```powershell
 py -3.12 -m venv .venv
 .venv\Scripts\activate
